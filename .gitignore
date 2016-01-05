@@ -1,0 +1,8 @@
+# Created by .ignore support plugin (hsz.mobi)
+.idea
+out
+src/test/
+target
+accounts.txt
+SteamGEN.iml
+SteamGenerator.iml
