@@ -1,6 +1,6 @@
 # steam-gen
-steam account generator for jacking old hotline emails
-joint project between: hvze, apteryx, latematt, ddong and phoenixdoom
+steam account generator for jacking old hotmail emails
+joint project between: hvze, apteryx and latematt
 
 ## Flags
 ```java
