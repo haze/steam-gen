@@ -1,6 +1,9 @@
 package pw.ddong.option;
 
-import java.util.*;
+import java.util.Collection;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Optional;
 
 /**
  * @author Daniel
@@ -32,14 +35,11 @@ public class OptionParser {
             return;
         }
 
-        List<Option> provided = new ArrayList<>();
         String command = compile(arguments);
         for (Option option : this.options.values()) {
             if (!this.isPresent(option.getLabel(), Optional.of(command))) {
                 continue;
             }
-
-            provided.add(option);
             this.cache.put(option.getLabel(), option);
         }
     }
@@ -107,11 +107,8 @@ public class OptionParser {
      * @return true or false depending on command
      */
     public boolean isPresent(String option, Optional<String> command) {
-        if (command.isPresent()) {
-            return command.get().contains(option);
-        }
+        return command.map(s -> s.contains(option)).orElseGet(() -> cache.containsKey(option));
 
-        return cache.containsKey(option);
     }
 
     /**

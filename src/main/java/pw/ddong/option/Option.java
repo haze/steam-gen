@@ -16,9 +16,7 @@ public class Option {
     public Option(String label, boolean required, Optional<String> description) {
         this.label = label;
         this.required = required;
-        if (description.isPresent()) {
-            this.description = description.get();
-        }
+        description.ifPresent(s -> this.description = s);
     }
 
     public String getLabel() {
