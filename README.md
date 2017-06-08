@@ -11,3 +11,9 @@ joint project between: haze & apteryx
       parser.register("-oav", false, "Only Accept Valid accounts");
       parser.register("--time", false, "Tells you the time it took to generate the accounts.");
 ```
+
+## this shid old man
+don't use this? (this was made in like, 2014-2015 lol)
+```
+this method is overly saturated and steam has blocks now to prevent people from doing this on 6 digit accounts and below (you need to contact support with the original CD key)
+```
